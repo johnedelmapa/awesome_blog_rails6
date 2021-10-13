@@ -1,11 +1,11 @@
 default: &default
   adapter: mysql2
-  encoding: utf8
+  encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: password
-  host: <%= ENV['DB_HOST'] %>
+  password: 
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: awesome_blog_rails6_development
+  database: awesomeblogdb

@@ -7,16 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-25.times do |n|
-  users = User.new(
+User.create(
+  name: "John Maps",
+  email: "mapajohnedel@gmail.com",
+  password: "password"
+)
+
+50.times do |n|
+  User.create(
     name: Faker::Name.name,
-    email: "user#{n+1}@email.com",
-    password: "password",
-    password_confirmation: "password"
+    email: Faker::Internet.unique.email,
+    password: "password"
   )
-  users.save
 end
-
-
-
 

@@ -9,6 +9,7 @@
                 <%= profile_image(@user, "profile-medium")%>
                 <h5><%= @user.name%></h5>
                 <p><%= @user.email %></p>
+                <%= render "follow_form"%>
             </div>
         </div>
     </div>
